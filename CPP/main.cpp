@@ -8,8 +8,6 @@ int main()
 {
     const int WINDOW_WIDTH = 600;
     const int WINDOW_HEIGHT = 600;
-    const int SCREEN_WIDTH = 600;
-    const int SCREEN_HEIGHT = 600;
     const int FPS = 60;
     const int frameDelay = 1000 / FPS;
     Uint32 frameStart;

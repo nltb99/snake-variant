@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		BC08A8BB26D52F00005CB0B4 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCBF3A7D26B7FB4300C9DDEE /* SDL2.framework */; };
-		BC08A8BE26D52F08005CB0B4 /* SDL2_image.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCBF3A7E26B7FB4300C9DDEE /* SDL2_image.framework */; };
 		BC65D07826DA3AA1009ACF67 /* Snake.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BC65D07626DA3AA1009ACF67 /* Snake.cpp */; };
 		BC65D07F26DA9274009ACF67 /* Food.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BC65D07D26DA9274009ACF67 /* Food.cpp */; };
 		BCBF3AC126B81C4E00C9DDEE /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BCBF3A9926B8040500C9DDEE /* main.cpp */; };
@@ -46,13 +45,11 @@
 		BC65D07D26DA9274009ACF67 /* Food.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Food.cpp; sourceTree = "<group>"; };
 		BC65D07E26DA9274009ACF67 /* Food.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Food.hpp; sourceTree = "<group>"; };
 		BCBF3A7D26B7FB4300C9DDEE /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = CPP/libs/SDL2.framework; sourceTree = "<group>"; };
-		BCBF3A7E26B7FB4300C9DDEE /* SDL2_image.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_image.framework; path = CPP/libs/SDL2_image.framework; sourceTree = "<group>"; };
 		BCBF3A9526B8040500C9DDEE /* Game.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Game.hpp; sourceTree = "<group>"; };
 		BCBF3A9926B8040500C9DDEE /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		BCBF3A9A26B8040500C9DDEE /* Game.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
 		BCBF3AA226B8042400C9DDEE /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SDL2.framework; sourceTree = "<group>"; };
 		BCC81D0926E73E070076DDC0 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = ../../../../../../Library/Frameworks/SDL2.framework; sourceTree = "<group>"; };
-		BCEA253226E47D24005C7C05 /* SDL2_mixer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_mixer.framework; path = CPP/libs/SDL2_mixer.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +57,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC08A8BE26D52F08005CB0B4 /* SDL2_image.framework in Frameworks */,
 				BC08A8BB26D52F00005CB0B4 /* SDL2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -121,9 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				BCC81D0926E73E070076DDC0 /* SDL2.framework */,
-				BCEA253226E47D24005C7C05 /* SDL2_mixer.framework */,
 				BC08A8B726D52EEB005CB0B4 /* libs */,
-				BCBF3A7E26B7FB4300C9DDEE /* SDL2_image.framework */,
 				BCBF3A7D26B7FB4300C9DDEE /* SDL2.framework */,
 			);
 			name = Frameworks;

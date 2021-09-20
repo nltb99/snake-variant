@@ -20,10 +20,14 @@ class Snake{
 public:
     Snake();
     ~Snake();
-
-    static std::vector<std::pair<std::pair<int, int>, int>> vt;
-    std::tuple<int, int, int, int, int> destructure();
     
+    struct SNAKE_BODY {
+        int first_x, first_y, last_x, last_y, current_direction;
+    };
+
+    static std::vector<std::pair<std::pair<int, int>, int>> vt;    
+    
+    SNAKE_BODY get_snake_body();
     void drawSnake();
     void move_up(bool bAuto);
     void move_down(bool bAuto);

@@ -31,39 +31,41 @@ void Snake::drawSnake()
     }
 }
 
-std::tuple<int, int, int, int, int> Snake::destructure()
+Snake::SNAKE_BODY Snake::get_snake_body()
 {
+    SNAKE_BODY snake_body;
+
     auto last_element = vt.end(); --last_element;
     auto first_element = vt.begin();
     
-    int current_direction = (*last_element).second;
+    snake_body.current_direction = (*last_element).second;
     
-    int first_x = (*first_element).first.first;
-    int first_y = (*first_element).first.second;
+    snake_body.first_x = (*first_element).first.first;
+    snake_body.first_y = (*first_element).first.second;
         
-    int last_x = (*last_element).first.first;
-    int last_y = (*last_element).first.second;
-    
-    return {first_x, first_y, last_x, last_y, current_direction};
+    snake_body.last_x = (*last_element).first.first;
+    snake_body.last_y = (*last_element).first.second;
+
+    return snake_body;
 }
 
 void Snake::move_up(bool bAuto)
 {
-    auto [first_x, first_y, last_x, last_y, current_direction] = Snake::destructure();
+    auto snake_body = Snake::get_snake_body();
     int x, y;
     if(
-       current_direction != Direction.DOWN &&
-       (bAuto || current_direction != Direction.UP)
+       snake_body.current_direction != Direction.DOWN &&
+       (bAuto || snake_body.current_direction != Direction.UP)
        ){
-        if(last_x <= 0) {
+        if(snake_body.last_x <= 0) {
             x = Game::TOTAL_CELL - 1;
-            y = last_y;
+            y = snake_body.last_y;
         } else {
-            x = last_x - 1;
-            y = last_y;
+            x = snake_body.last_x - 1;
+            y = snake_body.last_y;
         }
         if(!Snake::b_Collison(x, y)){
-            Snake:eraseTail(first_x, first_y, x, y);
+            Snake:eraseTail(snake_body.first_x, snake_body.first_y, x, y);
             Snake::addHead(x, y, Direction.UP);
         }
     }
@@ -71,21 +73,21 @@ void Snake::move_up(bool bAuto)
 
 void Snake::move_down(bool bAuto)
 {
-    auto [first_x, first_y, last_x, last_y, current_direction] = Snake::destructure();
+    auto snake_body = Snake::get_snake_body();
     int x, y;
     if(
-       current_direction != Direction.UP &&
-       (bAuto || current_direction != Direction.DOWN)
+       snake_body.current_direction != Direction.UP &&
+       (bAuto || snake_body.current_direction != Direction.DOWN)
        ){
-        if(last_x + 1 >= Game::TOTAL_CELL){
+        if(snake_body.last_x + 1 >= Game::TOTAL_CELL){
             x = 0;
-            y = last_y;
+            y = snake_body.last_y;
         } else {
-            x = last_x + 1;
-            y = last_y;
+            x = snake_body.last_x + 1;
+            y = snake_body.last_y;
         }
         if(!Snake::b_Collison(x, y)){
-            Snake:eraseTail(first_x, first_y, x, y);
+            Snake:eraseTail(snake_body.first_x, snake_body.first_y, x, y);
             Snake::addHead(x, y, Direction.DOWN);
         }
     }
@@ -93,21 +95,21 @@ void Snake::move_down(bool bAuto)
 
 void Snake::move_left(bool bAuto)
 {
-    auto [first_x, first_y, last_x, last_y, current_direction] = Snake::destructure();
+    auto snake_body = Snake::get_snake_body();
     int x, y;
     if(
-       current_direction != Direction.RIGHT &&
-       (bAuto || current_direction != Direction.LEFT)
+       snake_body.current_direction != Direction.RIGHT &&
+       (bAuto || snake_body.current_direction != Direction.LEFT)
        ){
-        if(last_y <= 0){
-            x = last_x;
+        if(snake_body.last_y <= 0){
+            x = snake_body.last_x;
             y = Game::TOTAL_CELL - 1;
         } else {
-            x = last_x;
-            y = last_y - 1;
+            x = snake_body.last_x;
+            y = snake_body.last_y - 1;
         }
         if(!Snake::b_Collison(x, y)){
-            Snake:eraseTail(first_x, first_y, x, y);
+            Snake:eraseTail(snake_body.first_x, snake_body.first_y, x, y);
             Snake::addHead(x, y, Direction.LEFT);
         }
     }
@@ -115,21 +117,21 @@ void Snake::move_left(bool bAuto)
 
 void Snake::move_right(bool bAuto)
 {
-    auto [first_x, first_y, last_x, last_y, current_direction] = Snake::destructure();
+    auto snake_body = Snake::get_snake_body();
     int x, y;
     if(
-       current_direction != Direction.LEFT &&
-       (bAuto || current_direction != Direction.RIGHT)
+       snake_body.current_direction != Direction.LEFT &&
+       (bAuto || snake_body.current_direction != Direction.RIGHT)
        ){
-        if(last_y + 1 >= Game::TOTAL_CELL){
-            x = last_x;
+        if(snake_body.last_y + 1 >= Game::TOTAL_CELL){
+            x = snake_body.last_x;
             y = 0;
         } else {
-            x = last_x;
-            y = last_y + 1;
+            x = snake_body.last_x;
+            y = snake_body.last_y + 1;
         }
         if(!Snake::b_Collison(x, y)){
-            Snake:eraseTail(first_x, first_y, x, y);
+            Snake:eraseTail(snake_body.first_x, snake_body.first_y, x, y);
             Snake::addHead(x, y, Direction.RIGHT);
         }
     }
@@ -184,10 +186,10 @@ void Snake::autoCrawlFoward()
 
 void Snake::autoCrawlAI()
 {
-    auto [first_x, first_y, last_x, last_y, current_direction] = Snake::destructure();
-    if(current_direction == Direction.UP){
-        if(last_x <= Food::posX){
-            if(last_y > Food::posY){
+    auto snake_body = Snake::get_snake_body();
+    if(snake_body.current_direction == Direction.UP){
+        if(snake_body.last_x <= Food::posX){
+            if(snake_body.last_y > Food::posY){
                 Snake::move_left(true);
             } else {
                 Snake::move_right(true);
@@ -195,9 +197,9 @@ void Snake::autoCrawlAI()
         } else{
             Snake::move_up(true);
         }
-    } else if (current_direction == Direction.DOWN){
-        if(last_x >= Food::posX){
-            if(last_y > Food::posY){
+    } else if (snake_body.current_direction == Direction.DOWN){
+        if(snake_body.last_x >= Food::posX){
+            if(snake_body.last_y > Food::posY){
                 Snake::move_left(true);
             } else {
                 Snake::move_right(true);
@@ -205,9 +207,9 @@ void Snake::autoCrawlAI()
         } else{
             Snake::move_down(true);
         }
-    } else if (current_direction == Direction.LEFT){
-        if(last_y <= Food::posY){
-            if(last_x < Food::posX){
+    } else if (snake_body.current_direction == Direction.LEFT){
+        if(snake_body.last_y <= Food::posY){
+            if(snake_body.last_x < Food::posX){
                 Snake::move_down(true);
             } else{
                 Snake::move_up(true);
@@ -215,9 +217,9 @@ void Snake::autoCrawlAI()
         } else{
             Snake::move_left(true);
         }
-    } else if (current_direction == Direction.RIGHT){
-        if(last_y >= Food::posY){
-            if(last_x < Food::posX){
+    } else if (snake_body.current_direction == Direction.RIGHT){
+        if(snake_body.last_y >= Food::posY){
+            if(snake_body.last_x < Food::posX){
                 Snake::move_down(true);
             } else{
                 Snake::move_up(true);
