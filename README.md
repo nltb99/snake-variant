@@ -1,12 +1,19 @@
 
 ## Demo
 ```console 
-# From Mac Terminal
-$ brew install sdl2 sdl2_image sdl2_mixer
 
-$ cd snake_variant/executable
-$ chmod +x ./CPP
-$ ./CPP
+$ git clone project
+
+# From Mac Terminal
+$ cd ./snake_variant
+
+# Copy all SDL2 framewords from "./libs" to "/Library/Frameworks"
+
+# Then
+$ chmod +x ./executable/CPP
+$ ./executable/CPP
+
+# Enjoy!!!
 
 ```
 
