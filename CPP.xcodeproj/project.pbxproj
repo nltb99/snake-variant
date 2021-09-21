@@ -7,23 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BC08A8BB26D52F00005CB0B4 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCBF3A7D26B7FB4300C9DDEE /* SDL2.framework */; };
 		BC65D07826DA3AA1009ACF67 /* Snake.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BC65D07626DA3AA1009ACF67 /* Snake.cpp */; };
 		BC65D07F26DA9274009ACF67 /* Food.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BC65D07D26DA9274009ACF67 /* Food.cpp */; };
 		BCBF3AC126B81C4E00C9DDEE /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BCBF3A9926B8040500C9DDEE /* main.cpp */; };
 		BCBF3AC326B81C5800C9DDEE /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BCBF3A9A26B8040500C9DDEE /* Game.cpp */; };
-		BCC81D0A26E73E070076DDC0 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCC81D0926E73E070076DDC0 /* SDL2.framework */; };
+		BCFD3E7226F995E6001FBBDA /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCFD3E7026F995E1001FBBDA /* SDL2.framework */; };
+		BCFD3E7326F995E6001FBBDA /* SDL2.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BCFD3E7026F995E1001FBBDA /* SDL2.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		BC08A8A526D52D78005CB0B4 /* CopyFiles */ = {
+		BC27B8E626F98B99008600E0 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			dstPath = "";
+			dstSubfolderSpec = 10;
 			files = (
+				BCFD3E7326F995E6001FBBDA /* SDL2.framework in Embed Frameworks */,
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 		BC3B6BD826B72AD20075123C /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -37,35 +39,23 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		BC08A8A726D52D78005CB0B4 /* Test */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Test; sourceTree = BUILT_PRODUCTS_DIR; };
-		BC08A8B726D52EEB005CB0B4 /* libs */ = {isa = PBXFileReference; lastKnownFileType = folder; name = libs; path = CPP/libs; sourceTree = "<group>"; };
 		BC3B6BDA26B72AD20075123C /* CPP */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CPP; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC65D07626DA3AA1009ACF67 /* Snake.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Snake.cpp; sourceTree = "<group>"; };
 		BC65D07726DA3AA1009ACF67 /* Snake.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Snake.hpp; sourceTree = "<group>"; };
 		BC65D07D26DA9274009ACF67 /* Food.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Food.cpp; sourceTree = "<group>"; };
 		BC65D07E26DA9274009ACF67 /* Food.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Food.hpp; sourceTree = "<group>"; };
-		BCBF3A7D26B7FB4300C9DDEE /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = CPP/libs/SDL2.framework; sourceTree = "<group>"; };
 		BCBF3A9526B8040500C9DDEE /* Game.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Game.hpp; sourceTree = "<group>"; };
 		BCBF3A9926B8040500C9DDEE /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		BCBF3A9A26B8040500C9DDEE /* Game.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
-		BCBF3AA226B8042400C9DDEE /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SDL2.framework; sourceTree = "<group>"; };
-		BCC81D0926E73E070076DDC0 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = ../../../../../../Library/Frameworks/SDL2.framework; sourceTree = "<group>"; };
+		BCFD3E7026F995E1001FBBDA /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = libs/SDL2.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		BC08A8A426D52D78005CB0B4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BC08A8BB26D52F00005CB0B4 /* SDL2.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		BC3B6BD726B72AD20075123C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BCC81D0A26E73E070076DDC0 /* SDL2.framework in Frameworks */,
+				BCFD3E7226F995E6001FBBDA /* SDL2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,7 +75,6 @@
 			isa = PBXGroup;
 			children = (
 				BC3B6BDA26B72AD20075123C /* CPP */,
-				BC08A8A726D52D78005CB0B4 /* Test */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -93,7 +82,6 @@
 		BC3B6BDC26B72AD20075123C /* CPP */ = {
 			isa = PBXGroup;
 			children = (
-				BCBF3AA026B8042400C9DDEE /* libs */,
 				BCBF3A9A26B8040500C9DDEE /* Game.cpp */,
 				BCBF3A9526B8040500C9DDEE /* Game.hpp */,
 				BCBF3A9926B8040500C9DDEE /* main.cpp */,
@@ -105,20 +93,10 @@
 			path = CPP;
 			sourceTree = "<group>";
 		};
-		BCBF3AA026B8042400C9DDEE /* libs */ = {
-			isa = PBXGroup;
-			children = (
-				BCBF3AA226B8042400C9DDEE /* SDL2.framework */,
-			);
-			path = libs;
-			sourceTree = "<group>";
-		};
 		BCBF780826B7D32700C4D124 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				BCC81D0926E73E070076DDC0 /* SDL2.framework */,
-				BC08A8B726D52EEB005CB0B4 /* libs */,
-				BCBF3A7D26B7FB4300C9DDEE /* SDL2.framework */,
+				BCFD3E7026F995E1001FBBDA /* SDL2.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -126,23 +104,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BC08A8A626D52D78005CB0B4 /* Test */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BC08A8AB26D52D78005CB0B4 /* Build configuration list for PBXNativeTarget "Test" */;
-			buildPhases = (
-				BC08A8A326D52D78005CB0B4 /* Sources */,
-				BC08A8A426D52D78005CB0B4 /* Frameworks */,
-				BC08A8A526D52D78005CB0B4 /* CopyFiles */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = Test;
-			productName = Test;
-			productReference = BC08A8A726D52D78005CB0B4 /* Test */;
-			productType = "com.apple.product-type.tool";
-		};
 		BC3B6BD926B72AD20075123C /* CPP */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = BC3B6BE126B72AD20075123C /* Build configuration list for PBXNativeTarget "CPP" */;
@@ -150,6 +111,7 @@
 				BC3B6BD626B72AD20075123C /* Sources */,
 				BC3B6BD726B72AD20075123C /* Frameworks */,
 				BC3B6BD826B72AD20075123C /* CopyFiles */,
+				BC27B8E626F98B99008600E0 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -168,9 +130,6 @@
 			attributes = {
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
-					BC08A8A626D52D78005CB0B4 = {
-						CreatedOnToolsVersion = 12.4;
-					};
 					BC3B6BD926B72AD20075123C = {
 						CreatedOnToolsVersion = 12.4;
 					};
@@ -190,19 +149,11 @@
 			projectRoot = "";
 			targets = (
 				BC3B6BD926B72AD20075123C /* CPP */,
-				BC08A8A626D52D78005CB0B4 /* Test */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		BC08A8A326D52D78005CB0B4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		BC3B6BD626B72AD20075123C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -217,30 +168,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		BC08A8AC26D52D78005CB0B4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/CPP/libs",
-				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		BC08A8AD26D52D78005CB0B4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/CPP/libs",
-				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 		BC3B6BDF26B72AD20075123C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -278,7 +205,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = "/Library/Frameworks/**";
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/CPP/libs/**";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -293,15 +220,16 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "/Library/Frameworks/**";
-				LIBRARY_SEARCH_PATHS = "/Library/Frameworks/**";
+				HEADER_SEARCH_PATHS = "";
+				LIBRARY_SEARCH_PATHS = "";
 				MACOSX_DEPLOYMENT_TARGET = 11.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CODE_SIGN_FLAGS = "--deep";
 				SDKROOT = macosx;
-				SYSTEM_FRAMEWORK_SEARCH_PATHS = "/Library/Frameworks/**";
-				SYSTEM_HEADER_SEARCH_PATHS = "/Library/Frameworks/**";
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = "";
+				SYSTEM_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
 		};
@@ -342,7 +270,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = "/Library/Frameworks/**";
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/CPP/libs/**";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -351,14 +279,15 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "/Library/Frameworks/**";
-				LIBRARY_SEARCH_PATHS = "/Library/Frameworks/**";
+				HEADER_SEARCH_PATHS = "";
+				LIBRARY_SEARCH_PATHS = "";
 				MACOSX_DEPLOYMENT_TARGET = 11.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				OTHER_CODE_SIGN_FLAGS = "--deep";
 				SDKROOT = macosx;
-				SYSTEM_FRAMEWORK_SEARCH_PATHS = "/Library/Frameworks/**";
-				SYSTEM_HEADER_SEARCH_PATHS = "/Library/Frameworks/**";
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = "";
+				SYSTEM_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;
 		};
@@ -369,19 +298,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)/**",
-					"$(LOCAL_LIBRARY_DIR)/Frameworks/**",
-					"$(PROJECT_DIR)/CPP/libs/**",
-					"/Library/Frameworks/**",
-					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+					"$(PROJECT_DIR)/libs/**",
 				);
-				INCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = /Library/Frameworks;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(LOCAL_LIBRARY_DIR)/Frameworks/SDL2.framework/Versions/A",
-				);
+				INCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nltbao;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				REZ_SEARCH_PATHS = "/Library/Frameworks/**";
-				USER_HEADER_SEARCH_PATHS = "/Library/Frameworks/**";
+				REZ_SEARCH_PATHS = "";
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
 		};
@@ -392,34 +316,20 @@
 				CODE_SIGN_STYLE = Automatic;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)/**",
-					"$(LOCAL_LIBRARY_DIR)/Frameworks/**",
-					"$(PROJECT_DIR)/CPP/libs/**",
-					"/Library/Frameworks/**",
-					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+					"$(PROJECT_DIR)/libs/**",
 				);
-				INCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = /Library/Frameworks;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(LOCAL_LIBRARY_DIR)/Frameworks/SDL2.framework/Versions/A",
-				);
+				INCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nltbao;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				REZ_SEARCH_PATHS = "/Library/Frameworks/**";
-				USER_HEADER_SEARCH_PATHS = "/Library/Frameworks/**";
+				REZ_SEARCH_PATHS = "";
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BC08A8AB26D52D78005CB0B4 /* Build configuration list for PBXNativeTarget "Test" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BC08A8AC26D52D78005CB0B4 /* Debug */,
-				BC08A8AD26D52D78005CB0B4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		BC3B6BD526B72AD20075123C /* Build configuration list for PBXProject "CPP" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
